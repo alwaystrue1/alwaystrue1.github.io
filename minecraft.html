@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Relaunch</button>
+</body>
+<script>
+  var url = "https://classroom.google.com"
+  var newWin = window.open(url);             
+  var blocked = false;
+    if(!newWin || newWin.closed || typeof newWin.closed=='undefined') 
+    { 
+        blocked = true;
+    }
+  function launch() {
+    const w = window.open() // access the "about:blank" window you've opened
+    window.location.replace("https://google.com");
+    w.document.body.innerHTML = `
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        My Drive - Google Drive
+    </title>
+    
+    <style>
+        body {
+            text-align: center;
+        }
+        html, body, div, iframe, button {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+</style>
+    </style>
+</head>
+
+<body>
+    <iframe src='https://eaglercraft.q13x.com/1.8-js/?retina=true/' frameborder=0 style='overflow:hidden!important;overflow-x:hidden!important;overflow-y:hidden!important;height:100%;width:100%;position:absolute!important;top:0%;left:0px;right:0px;bottom:0px;z-index:9999!important;' height='100%' width='100%'></iframe>
+    <button onclick='this.iframe[0].contentWindow.document.body.focus();' hidden>‎</button>
+</body>
+
+</html>
+`
+    }
+    document.querySelector('button').onclick = function() {
+          launch();
+          document.querySelector('button').style.background = 'grey';
+          document.querySelector('button').innerHTML = "Relaunch";
+        };
+    if (!blocked) {
+        launch();
+    }
+</script>
+</html>
