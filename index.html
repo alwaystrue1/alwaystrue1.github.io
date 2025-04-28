@@ -18,7 +18,8 @@
     }
   function launch() {
     const w = window.open() // access the "about:blank" window you've opened
-    window.location.replace("https://google.com");
+    var win = window.open("about:blank", "_self");
+    win.close();
     w.document.body.innerHTML = `
 <!DOCTYPE html>
 <html>
