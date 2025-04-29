@@ -12,7 +12,7 @@
   function launch() {
     const w = window.open() // access the "about:blank" window you've opened
     if (w) {
-        w.location.replace("https://google.com");
+        window.location.replace("https://google.com");
         } else {
         alert("Popups are disabled! Click the Relaunch button to launch ALauncher.");
         return;
