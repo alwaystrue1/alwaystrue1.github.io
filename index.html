@@ -9,13 +9,6 @@
 <button>Relaunch</button>
 </body>
 <script>
-var url = "https://classroom.google.com"
-var newWin = window.open(url);
-var blocked = false;
-if(!newWin || newWin.closed || typeof newWin.closed=='undefined')
-{
-blocked = true;
-}
 function launch() {
 const w = window.open() // access the "about:blank" window you've opened
 window.location.replace("https://google.com");
@@ -160,8 +153,6 @@ launch();
 document.querySelector('button').style.background = 'grey';
 document.querySelector('button').innerHTML = "Relaunch";
 };
-if (!blocked) {
 launch();
-}
 </script>
 </html>

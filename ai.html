@@ -9,13 +9,6 @@
 <button>Relaunch</button>
 </body>
 <script>
-var url = "https://classroom.google.com"
-var newWin = window.open(url);
-var blocked = false;
-if(!newWin || newWin.closed || typeof newWin.closed=='undefined')
-{
-blocked = true;
-}
 function launch() {
 const w = window.open() // access the "about:blank" window you've opened
 window.location.replace("https://google.com");
@@ -45,7 +38,7 @@ border: none;
 
 <body>
 <iframe src='https://you.com/search' frameborder=0 style='overflow:hidden!important;overflow-x:hidden!important;overflow-y:hidden!important;height:100%;width:100%;position:absolute!important;top:0%;left:0px;right:0px;bottom:0px;z-index:9999!important;' height='100%' width='100%'></iframe>
-<button onclick='this.iframe[0].contentWindow.document.body.focus();' hidden>‎</button>
+<button onclick='this.iframe[0].contentWindow.document.body.focus();' hidden></button>
 </body>
 
 </html>
@@ -56,8 +49,6 @@ launch();
 document.querySelector('button').style.background = 'grey';
 document.querySelector('button').innerHTML = "Relaunch";
 };
-if (!blocked) {
 launch();
-}
 </script>
 </html>
