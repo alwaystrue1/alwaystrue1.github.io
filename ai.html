@@ -17,7 +17,7 @@ if (w) {
         alert("Popups are disabled! Click the Relaunch button to launch ALauncher.");
         return;
     }
-w.document.body.innerHTML = `
+w.document.write(`
 <!DOCTYPE html>
 <html>
 
@@ -47,7 +47,7 @@ border: none;
 </body>
 
 </html>
-`
+`);
 }
 document.querySelector('button').onclick = function() {
 launch();
