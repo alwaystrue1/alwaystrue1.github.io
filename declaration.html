@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Declaration of BigChat — Last revised 6/3/25</title>
+<meta name="author" content="Ari Jaffin, Charles Locke, Brandon Opler" />
+<style>
+:root{
+--bg:#0f1724;
+--card:#0b1220;
+--muted:#9aa4b2;
+--accent:#6ee7b7;
+--accent-2:#60a5fa;
+--paper:#f7fafc;
+--radius:14px;
+--glass: rgba(255,255,255,0.04);
+--maxw:960px;
+font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html,body{
+height:100%;
+margin:0;
+background:
+radial-gradient(800px 400px at 10% 10%, rgba(96,165,250,0.06), transparent 8%),
+linear-gradient(180deg, rgba(6,10,15,0.7), rgba(4,6,10,0.9)),
+var(--bg);
+-webkit-font-smoothing:antialiased;
+color:var(--paper);
+line-height:1.45;
+}
+
+.wrap{
+max-width:var(--maxw);
+margin:40px auto;
+padding:28px;
+}
+
+header.card{
+background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+border-radius:var(--radius);
+padding:22px;
+display:flex;
+align-items:center;
+gap:18px;
+box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+backdrop-filter: blur(6px) saturate(120%);
+}
+
+.logo {
+width:200px;
+height:auto;
+max-width:100%;
+border-radius:12px;
+display:block;
+box-shadow: 0 6px 18px rgba(96,165,250,0.12);
+}
+
+h1{
+margin:0;
+font-size:20px;
+letter-spacing:0.2px;
+}
+p.lead{
+margin:4px 0 0 0;
+color:var(--muted);
+font-size:13px;
+}
+
+main.card{
+margin-top:18px;
+padding:24px;
+border-radius:var(--radius);
+background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+box-shadow: 0 20px 40px rgba(2,6,23,0.7);
+}
+
+.section{
+margin-bottom:18px;
+padding:14px;
+border-radius:10px;
+background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+border: 1px solid rgba(255,255,255,0.02);
+}
+.section h2{
+margin:0 0 8px 0;
+font-size:15px;
+color:var(--accent);
+}
+.section pre, .section p {
+margin:0;
+color:var(--paper);
+font-size:14px;
+white-space:pre-wrap;
+word-break:break-word;
+}
+.muted { color:var(--muted); font-size:13px; }
+
+.mods {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:12px;
+margin-top:10px;
+}
+.mod {
+background:var(--glass);
+padding:10px;
+border-radius:8px;
+border:1px solid rgba(255,255,255,0.02);
+}
+.mod strong { display:block; font-size:14px; color:var(--paper); }
+.mod span { font-size:13px; color:var(--muted); }
+
+footer{
+margin-top:16px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+a.link{
+color:var(--accent-2);
+text-decoration:none;
+font-weight:600;
+}
+
+@media (max-width:520px){
+.wrap{ padding:16px; margin:18px auto; }
+.logo{ width:120px; }
+}
+
+@media print {
+:root { color-scheme:light; }
+body { background:white; color:#111; }
+header.card, main.card { box-shadow:none; background:transparent; border:0; }
+}
+
+.meta-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.pill {
+background:rgba(255,255,255,0.03);
+padding:6px 10px;
+border-radius:999px;
+font-size:13px;
+color:var(--muted);
+border:1px solid rgba(255,255,255,0.02);
+}
+
+.actions { display:flex; gap:10px; align-items:center; }
+button.copy {
+background:transparent;
+color:var(--accent);
+border:1px solid rgba(110,231,183,0.08);
+padding:8px 12px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:0.2px;
+}
+button.copy:active { transform:translateY(1px); }
+</style>
+</head>
+<body>
+<div class="wrap" role="main">
+<header class="card" aria-labelledby="title">
+<img src="https://alwaystrue1.github.io/bigchat.png" 
+alt="BigChat Logo" 
+class="logo" />
+<div>
+<h1 id="title">Declaration of BigChat</h1>
+<p class="lead">Last revised <strong>June 3, 2025</strong> — Terms, staff, and ban reference.</p>
+</div>
+<div style="margin-left:auto" aria-hidden="true">
+<div class="pill">Document Rights: Ari Jaffin • Charles Locke • Brandon Opler</div>
+</div>
+</header>
+
+<main class="card" aria-label="BigChat Declaration content">
+<section class="section" aria-labelledby="article-a">
+<h2 id="article-a">Article A — USE OF BIGCHAT SERVICES</h2>
+<pre>
+BigChat is not liable for any emotional, physical, or psychological harm caused by others, but rather the person(s) who inflicted the harm. BigChat reserves the right to ban anyone who breaks these terms and conditions. Additionally, racism, harassment, bullying, intimidation, homophobia, transphobia, inappropriate messages/imagery are prohibited, and will lead to suspension/possible termination of your use of BigChat.
+
+Using BigChat after 9 PM ET year-round (or 10 PM ET in the summer), with the exception of a 1 hour extension for "good nights". In addition, removing users from the chat will lead in a coercive ban on the user, unless a ban has been officially placed in the ban list. Please do not re-add anyone who has been suspended/terminated, unless their suspension has expired or has been revoked.
+</pre>
+</section>
+
+<section class="section" aria-labelledby="article-b">
+<h2 id="article-b">Article B — DOCUMENT RIGHTS</h2>
+<p>
+All rights of this document are reserved to <strong>Ari Jaffin</strong>, <strong>Charles Locke</strong>, and <strong>Brandon Opler</strong>. No unauthorized copies of this document are to be made by others. If any copies are found, please notify BigChat immediately by emailing <a href="mailto:alwtrue1@gmail.com" class="link">alwtrue1@gmail.com</a>.
+</p>
+</section>
+
+<section class="section" aria-labelledby="moderators">
+<h2 id="moderators">Moderator List</h2>
+<div class="mods" role="list">
+<div class="mod" role="listitem"><strong>Charles Locke</strong><span>Owner</span></div>
+<div class="mod" role="listitem"><strong>Brandon Opler</strong><span>Co-Owner</span></div>
+<div class="mod" role="listitem"><strong>Ari Jaffin</strong><span>Head Admin</span></div>
+<div class="mod" role="listitem"><strong>Penelope Perez</strong><span>Admin</span></div>
+<div class="mod" role="listitem"><strong>Evelyn Beuscher</strong><span>BigChat Spy for Lil Chat</span></div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="banlist">
+<h2 id="banlist">Ban List</h2>
+<p class="muted">Public ban list (plain text):</p>
+<p><a href="https://alauncher.ct.ws/bigchatban.txt" target="_blank" rel="noopener noreferrer" class="link">https://alauncher.ct.ws/bigchatban.txt</a></p>
+</section>
+
+<footer>
+<div class="meta-row">
+<div class="pill" title="Revision date">Revised: 6/3/25</div>
+<div class="pill" title="Document owners">Owners: Ari • Charles • Brandon</div>
+</div>
+
+<div class="actions" aria-hidden="true">
+<button class="copy" onclick="copyToClipboard()">Copy plain text</button>
+</div>
+</footer>
+</main>
+
+<p style="text-align:center; color:var(--muted); margin-top:12px; font-size:13px;">
+Generated HTML — tweak styles or copy/paste the content to your site as needed.
+</p>
+</div>
+
+<script>
+function copyToClipboard() {
+const text = [
+`Declaration of BigChat:
+Last revised 6/3/25
+______________
+
+Article A; USE OF BIGCHAT SERVICES:
+BigChat is not liable for any emotional, physical, or psychological harm caused by others, but rather the person(s) who inflicted the harm. BigChat reserves the right to ban anyone who breaks these terms and conditions. Additionally, racism, harassment, bullying, intimidation, homophobia, transphobia, inappropriate messages/imagery are prohibited, and will lead to suspension/possible termination of your use of BigChat. Using BigChat after 9 PM ET year-round (or 10 PM ET in the summer), with the exception of a 1 hour extension for good nights. In addition, removing users from the chat will lead in a coercive ban on the user, unless a ban has been officially placed in the ban list. Please do not re-add anyone who has been suspended/terminated, unless their suspension has expired or has been revoked.
+
+Article B; DOCUMENT RIGHTS
+All of the rights of this document are reserved to Ari Jaffin, Charles Locke, and Brandon Opler. No unauthorized copies of this document are to be made by others. If any copies are found, please notify BigChat immediately by emailing alwtrue1@gmail.com.
+
+Moderator List:
+_______________
+
+Charles Locke: Owner
+Brandon Opler: Co-Owner
+Ari Jaffin: Head Admin
+Penelope Perez: Admin
+Evelyn Beuscher: BigChat Spy for Lil Chat
+
+Ban List Link: https://alauncher.ct.ws/bigchatban.txt`
+].join('\\n\\n');
+navigator.clipboard?.writeText(text).then(() => {
+const btn = document.querySelector('button.copy');
+const old = btn.innerText;
+btn.innerText = 'Copied!';
+setTimeout(()=> btn.innerText = old, 1600);
+}).catch(()=> alert('Copy failed — please select and copy manually.'));
+}
+</script>
+</body>
+</html>
