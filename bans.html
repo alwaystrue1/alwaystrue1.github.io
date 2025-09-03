@@ -1,72 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BigChat Ban List</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-    }
-    h1 {
-      color: #b30000;
-    }
-    h2 {
-      margin-top: 30px;
-    }
-    .appeal {
-      margin-top: 40px;
-      padding: 20px;
-      background: #fff3f3;
-      border: 2px solid #b30000;
-      border-radius: 10px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 6px;
-      background: #b30000;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background: #800000;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BigChat Ban List</title>
+<meta name="author" content="Ari Jaffin, Charles Locke, Brandon Opler" />
+<style>
+:root{
+--bg:#0f1724;
+--muted:#9aa4b2;
+--accent:#f87171; /* red for bans */
+--accent-2:#60a5fa; /* blue accent */
+--paper:#f7fafc;
+--radius:14px;
+--glass: rgba(255,255,255,0.04);
+--maxw:720px;
+font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+html,body{
+height:100%;
+margin:0;
+background:
+radial-gradient(800px 400px at 10% 10%, rgba(96,165,250,0.06), transparent 8%),
+linear-gradient(180deg, rgba(6,10,15,0.7), rgba(4,6,10,0.9)),
+var(--bg);
+color:var(--paper);
+line-height:1.5;
+}
+.wrap{ max-width:var(--maxw); margin:40px auto; padding:28px; }
+header.card{
+background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+border-radius:var(--radius);
+padding:22px;
+display:flex;
+align-items:center;
+gap:18px;
+box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+backdrop-filter: blur(6px) saturate(120%);
+}
+.logo {
+width:120px;
+height:auto;
+max-width:100%;
+border-radius:12px;
+display:block;
+box-shadow: 0 6px 18px rgba(96,165,250,0.12);
+}
+h1{ margin:0; font-size:22px; }
+p.lead{ margin:4px 0 0 0; color:var(--muted); font-size:14px; }
+main.card{
+margin-top:18px;
+padding:24px;
+border-radius:var(--radius);
+background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+box-shadow: 0 20px 40px rgba(2,6,23,0.7);
+}
+.section{ margin-bottom:22px; }
+.section h2{ margin:0 0 10px 0; font-size:16px; color:var(--accent); }
+ul{ list-style:none; padding:0; margin:0; }
+li{
+margin-bottom:12px;
+padding:12px;
+border-radius:8px;
+background:var(--glass);
+border:1px solid rgba(255,255,255,0.05);
+}
+li strong{ color:var(--paper); display:block; font-size:14px; }
+li span{ color:var(--muted); font-size:13px; }
+footer{
+margin-top:18px;
+font-size:13px;
+color:var(--muted);
+}
+a{ color:var(--accent-2); text-decoration:none; }
+
+/* Buttons for appeal section */
+.btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+button.btn, a.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent-2);
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: background 0.2s;
+}
+button.btn:hover, a.btn:hover {
+  background: #3b82f6; /* slightly brighter blue */
+}
+@media (max-width:520px){
+.wrap{ padding:16px; margin:18px auto; }
+.logo{ width:90px; }
+}
+</style>
 </head>
 <body>
-  <h1>BigChat Ban List</h1>
+<div class="wrap">
+<header class="card">
+<img src="https://alwaystrue1.github.io/bigchat.png" 
+alt="BigChat Logo" 
+class="logo" />
+<div>
+<h1>BigChat Ban List</h1>
+<p class="lead">Latest bans and suspension details | To check the latest ban status, clear your web cache to get the updated website.</p>
+</div>
+</header>
 
-  <h2>Temporary Bans:</h2>
-  <p><b>Daniel (201) 669-5525:</b> banned pending review, mass removed members</p>
+<main class="card">
+<section class="section">
+<h2>Temporary Bans</h2>
+<ul>
+<li>
+<strong>No temporary bans</strong>
+<span>There are currently no temporary bans in effect.</span>
+</li>
+</ul>
+</section>
 
-  <h2>Permanent Bans:</h2>
-  <p><b>Gino (914) 560-6933:</b> banned for misconduct, bullying, and abusing BigChat leniencies</p>
+<section class="section">
+<h2>Permanent Bans</h2>
+<ul>
+<li>
+<strong>Gino (914) 560-6933</strong>
+<span>Banned for misconduct, bullying, and abusing BigChat leniencies</span>
+</li>
+<li>
+<strong>Daniel (201) 669-5525</strong>
+<span>Mass removed members, continued to break clearly posted BigChat rules</span>
+</li>
+</ul>
+</section>
 
-  <p>If you have any problems, contact Ari at <a href="mailto:alwtrue1@gmail.com">alwtrue1@gmail.com</a> or (201) 474-5998.<br>
-  Standard mobile data rates may apply.</p>
+<section class="section">
+<h2>Appeal Your Ban</h2>
+<p>If you believe your ban was a mistake, you can submit an appeal:</p>
+<div class="btns">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhty-vbcxnAAvDEJkyPUB1WpVeLxuzepjeFumJpxmcYtWYRA/viewform?usp=header" 
+     class="btn" target="_blank">Go to Appeal Form</a>
+  <button class="btn" onclick="copyLink()">Copy Appeal Link</button>
+</div>
+</section>
 
-  <div class="appeal">
-    <h2>Appeal Your Ban</h2>
-    <p>If you believe your ban was a mistake, or you believe that you should be unbanned, you can appeal using the form below.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhty-vbcxnAAvDEJkyPUB1WpVeLxuzepjeFumJpxmcYtWYRA/viewform?usp=header" class="btn" target="_blank">Go to Appeal Form</a>
-    <button class="btn" onclick="copyLink()">Copy Appeal Link</button>
-  </div>
+<footer>
+<p>
+If you have any problems, contact <strong>Ari</strong> at 
+<a href="mailto:alwtrue1@gmail.com">alwtrue1@gmail.com</a> or 
+<a href="tel:+12014745998">(201) 474-5998</a>. 
+<br/>Standard mobile data rates may apply.
+</p>
+</footer>
+</main>
+</div>
 
-  <script>
-    function copyLink() {
-      const link = "https://docs.google.com/forms/d/e/1FAIpQLSfhty-vbcxnAAvDEJkyPUB1WpVeLxuzepjeFumJpxmcYtWYRA/viewform?usp=header";
-      navigator.clipboard.writeText(link).then(() => {
-        alert("Appeal link copied to clipboard!");
-      });
-    }
-  </script>
+<script>
+function copyLink() {
+  const link = "https://docs.google.com/forms/d/e/1FAIpQLSfhty-vbcxnAAvDEJkyPUB1WpVeLxuzepjeFumJpxmcYtWYRA/viewform?usp=header";
+  navigator.clipboard.writeText(link).then(() => {
+    alert("Appeal link copied to clipboard!");
+  });
+}
+</script>
 </body>
 </html>
